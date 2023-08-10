@@ -19,7 +19,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 
 ############################################################################################################
-username, password = 'SchultzCOP', 'lnG.69Crude' ### Input your PJM username/password
+username, password = 'Username', 'password' ### Input your PJM username/password to login to PJM
 ############################################################################################################
 
 ### Confingure for automatic login to PJM w/ Selenium
