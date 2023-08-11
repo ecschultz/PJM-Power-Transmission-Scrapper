@@ -74,7 +74,6 @@ df['TransservSTOP_HOUR']= df['START_TIME'].str[8:10].astype(int)
 df['STOPTime_Zone']= df['START_TIME'].str[:-2]
 
 df['START_TIME'] = df.apply(lambda x:datetime.strptime("{0} {1} {2} {3} 00:00".format(x['TransservSTART_Year'], x['TransservSTART_MONTH'], x['TransservSTART_DAY'], x['TransservSTOP_HOUR']),                                                 "%Y %m %d %H %M:%S"),axis=1)
-
 df['STOP_TIME'] = df.apply(lambda x:datetime.strptime("{0} {1} {2} {3} 00:00".format(x['TransservSTOP_Year'], x['TransservSTOP_MONTH'], x['TransservSTOP_DAY'], x['TransservSTOP_HOUR']),                                                 "%Y %m %d %H %M:%S"),axis=1)
 
 ### Classify date as Days of the week
